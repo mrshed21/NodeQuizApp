@@ -10,7 +10,7 @@ const QuestionSchema = new Schema({
 
 const QuizSchema = new Schema({
   title: { type: String, required: true },
-  category: String,
+  category: { type: String, required: true , unique: true },
   description: String,
   questions: [QuestionSchema]
 }, { timestamps: true });
