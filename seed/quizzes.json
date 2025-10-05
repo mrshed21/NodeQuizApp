@@ -1,0 +1,22 @@
+[
+    {
+      "title": "JS Basics",
+      "category": "Programming",
+      "description": "أسئلة بسيطة عن JavaScript",
+      "questions": [
+        {
+          "text": "ما نتيجة 1 + 1؟",
+          "options": ["1", "2", "3"],
+          "correct": 1,
+          "points": 1
+        },
+        {
+          "text": "ما هو typeof [] ؟",
+          "options": ["array", "object", "list"],
+          "correct": 1,
+          "points": 1
+        }
+      ]
+    }
+  ]
+  
