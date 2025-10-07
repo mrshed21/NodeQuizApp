@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>📋 Quiz App Dashboard</h1>
+
+    <!-- Form to create or edit quizzes -->
+    <form id="quizForm">
+        <h2>📝 Create or Edit Quiz</h2>
+      <input type="hidden" id="quizId">
+      <input type="text" id="title" placeholder="Quiz title" required>
+      <input type="text" id="category" placeholder="Category">
+      <textarea id="description" placeholder="Description"></textarea>
+      <button type="submit">💾 Save quiz</button>
+    </form>
+
+    <hr>
+
+    <!-- List of quizzes -->
+    <h2>📚 Quizzes</h2>
+    <div id="quizList" class="quiz-list"></div>
+    <section id="questionSection" style="display:none; margin-top:20px;">
+        <h2>Questions in this quiz</h2>
+        <button id="backToQuizzes">⬅️ Back to quizzes</button>
+        <button id="addQuestionBtn">➕ Add question</button>
+      
+        <div id="questionsContainer"></div>
+      </section>
+      
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

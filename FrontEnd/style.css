@@ -1,0 +1,92 @@
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      direction: ltr;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    input, textarea, select, button {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    button {
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .quiz-list {
+      margin-top: 20px;
+    }
+    .quiz-item {
+      background: #f1f1f1;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .actions button {
+      margin-left: 5px;
+      background-color: #666;
+    }
+    .actions button.delete {
+      background-color: #e74c3c;
+    }
+  .question-card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    
+    align-items: center;
+    background: #fff;
+  }
+
+  #close {
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+
+  .toast {
+    position: fixed;
+    bottom:  20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0.9;
+  }
+  .toast.error { background: red; }
+  

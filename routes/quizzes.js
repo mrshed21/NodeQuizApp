@@ -12,12 +12,25 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET /api/quizzes/:id
+// GET /api/quizzes/:id => get quiz by id
 router.get("/:id", async (req, res) => {
   try {
     const quiz = await Quiz.findById(req.params.id);
     if (!quiz) return res.status(404).json({ msg: "Quiz not found" });
     res.json(quiz);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// GET /api/quizzes/:id/questions/:questionId => get question by id
+router.get("/:id/questions/:questionId", async (req, res) => {
+  try {
+    const quiz = await Quiz.findById(req.params.id);
+    if (!quiz) return res.status(404).json({ msg: "Quiz not found" });
+    const question = quiz.questions.id(req.params.questionId);
+    if (!question) return res.status(404).json({ msg: "Question not found" });
+    res.json(question);
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -71,18 +84,75 @@ router.post("/", async (req, res) => {
   }
 });
 
+
+
 // POST /api/quizzes/:id/questions  =>  add new question to existing quiz
 router.post("/:id/questions", async (req, res) => {
   try {
     const quiz = await Quiz.findById(req.params.id);
     if (!quiz) return res.status(404).json({ msg: "Quiz not found" });
-    quiz.questions.push(req.body);
+
+    const newQuestion = req.body;
+
+    // تحقق إذا كان السؤال موجود بالفعل (مثلاً بناءً على النص أو المعرف)
+    const isDuplicate = quiz.questions.some(q => q.text === newQuestion.text);
+    if (isDuplicate) {
+      return res.status(400).json({ msg: "Question already exists in the quiz" });
+    }
+
+    await quiz.questions.push(newQuestion);
+    console.log("pushed",quiz);
+    await quiz.save();
+    console.log("saved",quiz);
+    res.json(quiz);
+  } catch (e) {
+    res.status(400).json({ error: e.message });
+  }
+});
+
+// patch /api/quizzes/:id
+// PATCH /api/quizzes/:quizId/questions/:questionId
+router.patch("/:quizId/questions/:questionId", async (req, res) => {
+  try {
+    const quiz = await Quiz.findById(req.params.quizId);
+    if (!quiz) return res.status(404).json({ msg: "Quiz not found" });
+
+    const question = quiz.questions.id(req.params.questionId);
+    if (!question) return res.status(404).json({ msg: "Question not found" });
+
+    // تعديل الحقول المطلوبة
+    Object.assign(question, req.body);
+
     await quiz.save();
     res.json(quiz);
   } catch (e) {
     res.status(400).json({ error: e.message });
   }
 });
+
+
+
+// DELETE /api/quizzes/:quizId/questions/:questionId
+router.delete("/:quizId/questions/:questionId", async (req, res) => {
+  try {
+    const quiz = await Quiz.findById(req.params.quizId);
+    // console.log("quiz",quiz);
+    if (!quiz) return res.status(404).json({ msg: "Quiz not found" });
+
+    const question = quiz.questions.id(req.params.questionId);
+    console.log("question",question);
+    if (!question) return res.status(404).json({ msg: "Question not found" });
+
+
+    quiz.questions.pull(question);
+    await quiz.save();
+    res.json(quiz );
+  } catch (e) {
+    res.status(400).json({ error: e.message });
+  }
+});
+
+
 
 // PUT /api/quizzes/:id  => update quiz
 router.put("/:id", async (req, res) => {

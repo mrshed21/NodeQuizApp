@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="questionFormContainer" class="container" style="display: none;">
+        <div id="close">❌</div>
+        <h1>Add Questions</h1>
+        <form id="questionForm">
+            <input type="hidden" id="quizId">
+            <input type="hidden" id="category" value="">
+
+            <input type="text" id="questionText" placeholder="Question" required>
+            <input type="text" id="option1" placeholder="Option 1" required>
+            <input type="text" id="option2" placeholder="Option 2" required>
+            <input type="text" id="option3" placeholder="Option 3" required>
+            <input type="text" id="option4" placeholder="Option 4" required>
+            <select id="correctOption">
+                <option value="0">Correct Option 1</option>
+                <option value="1">Correct Option 2</option>
+                <option value="2">Correct Option 3</option>
+                <option value="3">Correct Option 4</option>
+            </select>
+            <button id="submitBtn" type="submit">Add Question</button>
+        </form>
+    </div>
+    <section id="questionSection" style="display:block; margin-top:20px;">
+        <h2>Questions in this quiz <strong style="margin-left:10px; color: red;" id="quizTitle"></strong></h2>
+        <button  id="backToQuizzes">⬅️ Back to quizzes</button>
+        <button id="addQuestionBtn">➕ Add question</button>
+      
+        <div id="questionsContainer"></div>
+      </section>
+      <div id="toast" class="toast"></div>
+
+    <script src="addQuestions.js"></script>
+</body>
+</html>

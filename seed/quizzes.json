@@ -1,22 +1,285 @@
 [
-    {
-      "title": "JS Basics",
-      "category": "Programming",
-      "description": "أسئلة بسيطة عن JavaScript",
-      "questions": [
-        {
-          "text": "ما نتيجة 1 + 1؟",
-          "options": ["1", "2", "3"],
-          "correct": 1,
-          "points": 1
-        },
-        {
-          "text": "ما هو typeof [] ؟",
-          "options": ["array", "object", "list"],
-          "correct": 1,
-          "points": 1
-        }
-      ]
-    }
-  ]
-  
+  {
+    "title": "Allmänbildning",
+    "category": "Allmänbildning",
+    "description": "Allmänna kunskapsfrågor om världen, historia och vetenskap.",
+    "questions": [
+      {
+        "text": "Vilket land har störst befolkning i världen (2024)?",
+        "options": ["Indien", "Kina", "USA", "Indonesien"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilket år började andra världskriget?",
+        "options": ["1937", "1939", "1941", "1945"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vad heter Sveriges huvudstad?",
+        "options": ["Göteborg", "Stockholm", "Malmö", "Uppsala"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilken planet kallas den röda planeten?",
+        "options": ["Mars", "Venus", "Jupiter", "Saturnus"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vem skrev 'Romeo och Julia'?",
+        "options": ["Shakespeare", "Dante", "Cervantes", "Goethe"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilket grundämne har kemisk beteckning O?",
+        "options": ["Syre", "Guld", "Kväve", "Kol"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Hur många dagar finns det i ett skottår?",
+        "options": ["365", "366", "364"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilket djur kallas 'skogarnas konung' i Sverige?",
+        "options": ["Björn", "Älg", "Räv", "Varg"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vad heter valutan i Storbritannien?",
+        "options": ["Euro", "Dollar", "Pund", "Franc"],
+        "correct": 2,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "title": "Programmering",
+    "category": "Programmering",
+    "description": "Frågor om programmering och webbutveckling.",
+    "questions": [
+      {
+        "text": "Vilket språk används för webbsidans struktur?",
+        "options": ["CSS", "JavaScript", "HTML", "Python"],
+        "correct": 2,
+        "points": 1
+      },
+      {
+        "text": "Vilken metod lägger till en sista post i en JS-array?",
+        "options": ["push()", "pop()", "shift()", "unshift()"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad betyder 'CSS'?",
+        "options": [
+          "Coded Style Sheets",
+          "Cascading Style Sheets",
+          "Computer Style Syntax",
+          "Creative Styles"
+        ],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilket av dessa är ett versionshanteringssystem?",
+        "options": ["Docker", "Git", "Node", "React"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilket format används ofta för API-data?",
+        "options": ["XML", "TXT", "JSON", "CSV"],
+        "correct": 2,
+        "points": 1
+      },
+      {
+        "text": "Vilken operator används för strikt likhet i JavaScript?",
+        "options": ["=", "==", "===", "!=="],
+        "correct": 2,
+        "points": 1
+      },
+      {
+        "text": "Vilken HTML-tagg används för en länk?",
+        "options": ["<a>", "<p>", "<link>", "<div>"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilket språk används för att styla webbsidor?",
+        "options": ["CSS", "HTML", "Python"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad returnerar typeof null i JavaScript?",
+        "options": ["null", "object", "undefined"],
+        "correct": 1,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "title": "Teknik & Internet",
+    "category": "Teknik",
+    "description": "Frågor om teknik, datorer och internet.",
+    "questions": [
+      {
+        "text": "Vad betyder Wi-Fi?",
+        "options": ["Wireless Fidelity", "Wide Frequency", "Web Fiber"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilket företag utvecklade iPhone?",
+        "options": ["Apple", "Samsung", "Nokia", "Huawei"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad används ett antivirusprogram till?",
+        "options": [
+          "Att skydda datorn mot skadlig programvara",
+          "Att rensa onödiga filer",
+          "Att uppdatera systemet"
+        ],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad betyder CPU?",
+        "options": [
+          "Central Processing Unit",
+          "Computer Power Unit",
+          "Control Processing Utility"
+        ],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilken webbläsare kommer från Google?",
+        "options": ["Edge", "Firefox", "Chrome", "Opera"],
+        "correct": 2,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "title": "Svenska språket",
+    "category": "Språk",
+    "description": "Enkla frågor om svenska ord och grammatik.",
+    "questions": [
+      {
+        "text": "Vilken är rätt pluralform av 'bok'?",
+        "options": ["böker", "böcker", "bokar"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vad betyder ordet 'snabb'?",
+        "options": ["långsam", "fort", "trött"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilken är rätt bestämd form av 'bord'?",
+        "options": ["borden", "bordet", "bordar"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vilket ord är ett verb?",
+        "options": ["springa", "snabb", "bil"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilket ord betyder samma som 'vacker'?",
+        "options": ["fin", "tråkig", "mörk"],
+        "correct": 0,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "title": "Matematik",
+    "category": "Matematik",
+    "description": "Grundläggande frågor i matematik.",
+    "questions": [
+      {
+        "text": "Vad är 5 + 3?",
+        "options": ["6", "8", "9"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vad är 10 delat med 2?",
+        "options": ["3", "4", "5"],
+        "correct": 2,
+        "points": 1
+      },
+      {
+        "text": "Vilken form har tre sidor?",
+        "options": ["Triangel", "Kvadrat", "Cirkel"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad är 9 - 4?",
+        "options": ["3", "5", "7"],
+        "correct": 1,
+        "points": 1
+      },
+      {
+        "text": "Vad är dubbelt av 7?",
+        "options": ["14", "12", "9"],
+        "correct": 0,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "title": "Logik & Tänkande",
+    "category": "Logik",
+    "description": "Enkla frågor för att träna hjärnan och tänka logiskt.",
+    "questions": [
+      {
+        "text": "Om alla katter är djur och alla djur andas, andas då katter?",
+        "options": ["Ja", "Nej"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilken av dessa är udda: 2, 4, 6, 9, 8?",
+        "options": ["2", "6", "9"],
+        "correct": 2,
+        "points": 1
+      },
+      {
+        "text": "Om det är måndag idag, vilken dag är det om 3 dagar?",
+        "options": ["Torsdag", "Onsdag", "Fredag"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vad kommer efter bokstäverna A, B, C?",
+        "options": ["D", "E", "F"],
+        "correct": 0,
+        "points": 1
+      },
+      {
+        "text": "Vilken siffra saknas i serien: 1, 2, 3, ?, 5?",
+        "options": ["4", "6", "7"],
+        "correct": 0,
+        "points": 1
+      }
+    ]
+  }
+]
