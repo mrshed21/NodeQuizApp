@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   if (!quizId) return;
 
   // جلب بيانات الكويز من السيرفر
-  const res = await fetch(`http://localhost:3000/api/quizzes/${quizId}`);
+  const res = await fetch(`https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}`);
   const quizData = await res.json();
 
   // عرض الأسئلة
@@ -75,7 +75,7 @@ questionForm.addEventListener("submit", async (e) => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/quizzes/${quizId}/questions`,
+        `https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}/questions`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -99,7 +99,7 @@ questionForm.addEventListener("submit", async (e) => {
 
     // try to fetch the current quiz to display the questions even if adding fails
     try {
-      const res = await fetch(`http://localhost:3000/api/quizzes/${quizId}`);
+      const res = await fetch(`https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}`);
       const quiz = await res.json();
       showQuestions(quiz);
     } catch (fetchErr) {
@@ -120,7 +120,7 @@ questionForm.addEventListener("submit", async (e) => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/quizzes/${quizId}/questions/${editquestionId}`,
+        `https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}/questions/${editquestionId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -160,7 +160,7 @@ async function editQuestion(quizId, questionId) {
   console.log(quizId, questionId);
   try {
     const res = await fetch(
-      `http://localhost:3000/api/quizzes/${quizId}/questions/${questionId}`
+      `https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}/questions/${questionId}`
     );
     const question = await res.json();
     document.getElementById("questionText").value = question.text;
@@ -185,10 +185,11 @@ async function editQuestion(quizId, questionId) {
 
 //------------- delete question -------------
 async function deleteQuestion(quizId, questionId) {
+  if (!confirm("Are you sure you want to delete this question?")) return;
   console.log(quizId, questionId);
   try {
     const res = await fetch(
-      `http://localhost:3000/api/quizzes/${quizId}/questions/${questionId}`,
+      `https://nodequizapp-ftcy.onrender.com/api/quizzes/${quizId}/questions/${questionId}`,
       {
         method: "DELETE",
       }
